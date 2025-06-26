@@ -2,56 +2,46 @@
 <!DOCTYPE html>
 <html lang="ka">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ბოიკოტის პლატფორმა</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ბოიკოტის პლატფორმა</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="intro-screen">
-    <img src="ge-flag.svg" alt="საქართველოს დროშა" class="full-screen-flag">
-    <h1 id="intro-text">გამოუცხადე ბოიკოტი არჩევნებს</h1>
-  </div>
-
-  <div id="form-section" class="hidden">
-    <h2>ბოიკოტის პლატფორმა – მოქალაქეთა ხმა</h2>
-    <form id="registerForm">
-      <div class="form-field">
-        <label for="idNumber">პირადი ნომერი *</label>
-        <input type="text" name="idNumber" id="idNumber" required>
-      </div>
-      <div class="form-field">
-        <label for="firstName">სახელი *</label>
-        <input type="text" name="firstName" id="firstName" required>
-      </div>
-      <div class="form-field">
-        <label for="lastName">გვარი *</label>
-        <input type="text" name="lastName" id="lastName" required>
-      </div>
-      <div class="form-field">
-        <label for="birthDate">დაბადების თარიღი</label>
-        <input type="date" name="birthDate" id="birthDate">
-      </div>
-      <div class="form-field">
-        <label for="phone">ტელეფონის ნომერი *</label>
-        <input type="text" name="phone" id="phone" required>
-      </div>
-      <div class="form-field">
-        <label for="email">ელ. ფოსტა</label>
-        <input type="email" name="email" id="email">
-      </div>
-      <button type="submit">დარეგისტრირება</button>
-    </form>
-  </div>
-
-  <div id="thank-you-screen" class="hidden">
-    <div class="thankyou">
-      <img src="ge-flag.svg" class="flag">
-      <img src="eu-flag.svg" class="flag">
-      <h1 id="thank-message"></h1>
+    <div id="landing" class="fullscreen">
+        <img src="ge-flag.svg" alt="Georgian Flag" class="fullscreen-flag">
+        <div class="center-text" onclick="showForm()">ჩაერთე ბოიკოტში</div>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <div id="form-section" class="hidden">
+        <h2>ბოიკოტის პლატფორმა – მოქალაქეთა ხმა</h2>
+        <form onsubmit="handleSubmit(event)">
+            <label>პირადი ნომერი *</label>
+            <input type="text" required>
+            <label>სახელი *</label>
+            <input type="text" required>
+            <label>გვარი *</label>
+            <input type="text" required>
+            <label>დაბადების თარიღი</label>
+            <input type="date">
+            <label>ტელეფონის ნომერი *</label>
+            <input type="text" required>
+            <label>ელ. ფოსტა</label>
+            <input type="email">
+            <button type="submit">დარეგისტრირება</button>
+        </form>
+    </div>
+
+    <div id="thank-you" class="hidden split-screen">
+        <div class="top-half">
+            <img src="ge-flag.svg" class="full-size-flag">
+        </div>
+        <div class="bottom-half">
+            <img src="eu-flag.svg" class="full-size-flag">
+            <div class="thank-text">გმადლობთ! ერთად ევროპული მომავლისთვის 🇬🇪🇪🇺</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

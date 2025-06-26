@@ -8,28 +8,47 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="splash" class="full-screen">
-    <img src="ge-flag.png" alt="საქართველოს დროშა" class="flag">
-    <h1 id="mainText" onclick="showForm()">გამოუცხადე ბოიკოტი არჩევნებს</h1>
+  <div id="intro-screen">
+    <img src="ge-flag.svg" alt="საქართველოს დროშა" class="full-screen-flag">
+    <h1 id="intro-text">გამოუცხადე ბოიკოტი არჩევნებს</h1>
   </div>
 
-  <div id="formSection" class="hidden">
+  <div id="form-section" class="hidden">
+    <h2>ბოიკოტის პლატფორმა – მოქალაქეთა ხმა</h2>
     <form id="registerForm">
-      <label>პირადი ნომერი *<input type="text" name="idNumber" required></label>
-      <label>სახელი *<input type="text" name="firstName" required></label>
-      <label>გვარი *<input type="text" name="lastName" required></label>
-      <label>დაბადების თარიღი<input type="date" name="birthDate"></label>
-      <label>ტელეფონის ნომერი *<input type="text" name="phone" required></label>
-      <label>ელ. ფოსტა<input type="email" name="email"></label>
-      <button type="submit">რეგისტრაცია</button>
+      <div class="form-field">
+        <label for="idNumber">პირადი ნომერი *</label>
+        <input type="text" name="idNumber" id="idNumber" required>
+      </div>
+      <div class="form-field">
+        <label for="firstName">სახელი *</label>
+        <input type="text" name="firstName" id="firstName" required>
+      </div>
+      <div class="form-field">
+        <label for="lastName">გვარი *</label>
+        <input type="text" name="lastName" id="lastName" required>
+      </div>
+      <div class="form-field">
+        <label for="birthDate">დაბადების თარიღი</label>
+        <input type="date" name="birthDate" id="birthDate">
+      </div>
+      <div class="form-field">
+        <label for="phone">ტელეფონის ნომერი *</label>
+        <input type="text" name="phone" id="phone" required>
+      </div>
+      <div class="form-field">
+        <label for="email">ელ. ფოსტა</label>
+        <input type="email" name="email" id="email">
+      </div>
+      <button type="submit">დარეგისტრირება</button>
     </form>
   </div>
 
-  <div id="thankYouSection" class="hidden full-screen">
+  <div id="thank-you-screen" class="hidden">
     <div class="thankyou">
-      <img src="ge-flag.png" class="flag">
-      <img src="eu-stars.png" class="flag">
-      <h1 id="thankText">გმადლობთ რეგისტრაციისთვის! ერთად ევროპული მომავლისკენ 🇬🇪🇪🇺</h1>
+      <img src="ge-flag.svg" class="flag">
+      <img src="eu-flag.svg" class="flag">
+      <h1 id="thank-message"></h1>
     </div>
   </div>
 

@@ -1,19 +1,21 @@
 
-const splash = document.getElementById("splash");
-const formSection = document.getElementById("formSection");
-const thankYouSection = document.getElementById("thankYouSection");
-const form = document.getElementById("registerForm");
+const introText = document.getElementById('intro-text');
+const introScreen = document.getElementById('intro-screen');
+const formSection = document.getElementById('form-section');
+const thankYouScreen = document.getElementById('thank-you-screen');
+const thankMessage = document.getElementById('thank-message');
+const form = document.getElementById('registerForm');
 
-function showForm() {
-  splash.classList.add("hidden");
-  formSection.classList.remove("hidden");
-}
+introText.addEventListener('click', () => {
+  introScreen.classList.add('hidden');
+  formSection.classList.remove('hidden');
+});
 
-form.addEventListener("submit", function(e) {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
-  const formData = new FormData(form);
-  const name = formData.get("firstName");
-  formSection.classList.add("hidden");
-  thankYouSection.classList.remove("hidden");
-  document.getElementById("thankText").innerText = `გმადლობთ, ${name}, რეგისტრაციისთვის! ერთად ევროპული მომავლისკენ 🇬🇪🇪🇺`;
+  const data = new FormData(form);
+  const firstName = data.get("firstName");
+  formSection.classList.add('hidden');
+  thankYouScreen.classList.remove('hidden');
+  thankMessage.innerText = `${firstName}, გმადლობთ ბოიკოტში მონაწილეობისათვის! 🇬🇪🇪🇺`;
 });

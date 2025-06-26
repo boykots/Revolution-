@@ -1,34 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="ka">
 <head>
-    <meta charset="UTF-8">
-    <title>ბოიკოტის პლატფორმა</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ბოიკოტის პლატფორმა</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <img src="ge-coat-of-arms.png" alt="საქართველოს გერბი" class="emblem">
-        <h1>ბოიკოტის პლატფორმა – მოქალაქეთა ხმა</h1>
-        <img src="eu-stars.png" alt="ევროკავშირის ვარსკვლავები" class="emblem">
-    </header>
+  <h1>ბოიკოტის პლატფორმა – მოქალაქეთა ხმა</h1>
+  <form id="registerForm">
+    <label>პირადი ნომერი <input type="text" name="idNumber" required /></label>
+    <label>სახელი <input type="text" name="firstName" required /></label>
+    <label>გვარი <input type="text" name="lastName" required /></label>
+    <label>დაბადების თარიღი <input type="date" name="dob" required /></label>
+    <label>ტელეფონის ნომერი <input type="text" name="phone" required /></label>
+    <label>ელ. ფოსტა <input type="email" name="email" required /></label>
+    <button type="submit">დარეგისტრირება</button>
+  </form>
 
-    <form id="registerForm">
-        <label>პირადი ნომერი * <input type="text" name="idNumber" required></label>
-        <label>გვარი * <input type="text" name="lastName" required></label>
-        <label>სახელი * <input type="text" name="firstName" required></label>
-        <label>დაბადების თარიღი <input type="date" name="birthDate"></label>
-        <label>ტელეფონის ნომერი * <input type="text" name="phone" required></label>
-        <label>ელ. ფოსტა <input type="email" name="email"></label>
-        <button type="submit">დარეგისტრირება</button>
-    </form>
+  <p>რეგისტრირებული მოქალაქე რაოდენობა: <span id="count">0</span></p>
+  <div id="userList"></div>
 
-    <div class="confirmation" id="confirmationMessage"></div>
+  <footer>
+    პლატფორმა ევროპული მომავლისთვის 🇪🇺
+  </footer>
 
-    <h2>რეგისტრირებულთა რაოდენობა: <span id="count">0</span></h2>
-    <div id="userList"></div>
-
-    <footer>პლატფორმა ევროპული ღირებულებებისთვის 🇪🇺</footer>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

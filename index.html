@@ -1,29 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="ka">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ბოიკოტის პლატფორმა</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>ბოიკოტის პლატფორმა – მოქალაქეთა ხმა</h1>
-  <form id="registerForm">
-    <label>პირადი ნომერი <input type="text" name="idNumber" required /></label>
-    <label>სახელი <input type="text" name="firstName" required /></label>
-    <label>გვარი <input type="text" name="lastName" required /></label>
-    <label>დაბადების თარიღი <input type="date" name="dob" required /></label>
-    <label>ტელეფონის ნომერი <input type="text" name="phone" required /></label>
-    <label>ელ. ფოსტა <input type="email" name="email" required /></label>
-    <button type="submit">დარეგისტრირება</button>
-  </form>
+  <div id="splash" class="full-screen">
+    <img src="ge-flag.png" alt="საქართველოს დროშა" class="flag">
+    <h1 id="mainText" onclick="showForm()">გამოუცხადე ბოიკოტი არჩევნებს</h1>
+  </div>
 
-  <p>რეგისტრირებული მოქალაქე რაოდენობა: <span id="count">0</span></p>
-  <div id="userList"></div>
+  <div id="formSection" class="hidden">
+    <form id="registerForm">
+      <label>პირადი ნომერი *<input type="text" name="idNumber" required></label>
+      <label>სახელი *<input type="text" name="firstName" required></label>
+      <label>გვარი *<input type="text" name="lastName" required></label>
+      <label>დაბადების თარიღი<input type="date" name="birthDate"></label>
+      <label>ტელეფონის ნომერი *<input type="text" name="phone" required></label>
+      <label>ელ. ფოსტა<input type="email" name="email"></label>
+      <button type="submit">რეგისტრაცია</button>
+    </form>
+  </div>
 
-  <footer>
-    პლატფორმა ევროპული მომავლისთვის 🇪🇺
-  </footer>
+  <div id="thankYouSection" class="hidden full-screen">
+    <div class="thankyou">
+      <img src="ge-flag.png" class="flag">
+      <img src="eu-stars.png" class="flag">
+      <h1 id="thankText">გმადლობთ რეგისტრაციისთვის! ერთად ევროპული მომავლისკენ 🇬🇪🇪🇺</h1>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

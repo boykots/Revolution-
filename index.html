@@ -2,48 +2,33 @@
 <!DOCTYPE html>
 <html lang="ka">
 <head>
-  <meta charset="UTF-8" />
-  <title>ბოიკოტის პლატფორმა</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>ბოიკოტის პლატფორმა</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="ge-coat-of-arms.png" alt="საქართველოს გერბი" class="logo">
-    <h1>ბოიკოტის პლატფორმა – მოქალაქეთა ხმა</h1>
-  </header>
+    <header>
+        <img src="ge-coat-of-arms.png" alt="საქართველოს გერბი" class="emblem">
+        <h1>ბოიკოტის პლატფორმა – მოქალაქეთა ხმა</h1>
+        <img src="eu-stars.png" alt="ევროკავშირის ვარსკვლავები" class="emblem">
+    </header>
 
-  <main>
     <form id="registerForm">
-      <label class="required">პირადი ნომერი *</label>
-      <input type="text" name="idNumber" required />
-
-      <label class="required">სახელი და გვარი *</label>
-      <input type="text" name="fullName" required />
-
-      <label>დაბადების თარიღი</label>
-      <input type="date" name="birthDate" />
-
-      <label class="required">ტელეფონის ნომერი *</label>
-      <input type="tel" name="phone" required />
-
-      <label>ელ. ფოსტა</label>
-      <input type="email" name="email" />
-
-      <button type="submit">დარეგისტრირება</button>
+        <label>პირადი ნომერი * <input type="text" name="idNumber" required></label>
+        <label>გვარი * <input type="text" name="lastName" required></label>
+        <label>სახელი * <input type="text" name="firstName" required></label>
+        <label>დაბადების თარიღი <input type="date" name="birthDate"></label>
+        <label>ტელეფონის ნომერი * <input type="text" name="phone" required></label>
+        <label>ელ. ფოსტა <input type="email" name="email"></label>
+        <button type="submit">დარეგისტრირება</button>
     </form>
 
-    <div class="counter">
-      <h3>რეგისტრირებულთა რაოდენობა: <span id="count">0</span></h3>
-    </div>
+    <div class="confirmation" id="confirmationMessage"></div>
 
+    <h2>რეგისტრირებულთა რაოდენობა: <span id="count">0</span></h2>
     <div id="userList"></div>
-  </main>
 
-  <footer>
-    <img src="eu-stars.png" alt="ევროკავშირის ვარსკვლავები" class="eu">
-    <span>პლატფორმა ევროპული ღირებულებებისთვის 🇪🇺</span>
-  </footer>
-
-  <script src="script.js"></script>
+    <footer>პლატფორმა ევროპული ღირებულებებისთვის 🇪🇺</footer>
+    <script src="script.js"></script>
 </body>
 </html>

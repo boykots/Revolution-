@@ -1,11 +1,21 @@
 
-function showForm() {
-    document.getElementById('landing').style.display = 'none';
-    document.getElementById('form-section').style.display = 'block';
-}
+const introText = document.getElementById('intro-text');
+const introScreen = document.getElementById('intro-screen');
+const formSection = document.getElementById('form-section');
+const thankYouScreen = document.getElementById('thank-you-screen');
+const thankMessage = document.getElementById('thank-message');
+const form = document.getElementById('registerForm');
 
-function handleSubmit(event) {
-    event.preventDefault();
-    document.getElementById('form-section').style.display = 'none';
-    document.getElementById('thank-you').style.display = 'flex';
-}
+introText.addEventListener('click', () => {
+  introScreen.classList.add('hidden');
+  formSection.classList.remove('hidden');
+});
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const data = new FormData(form);
+  const firstName = data.get("firstName");
+  formSection.classList.add('hidden');
+  thankYouScreen.classList.remove('hidden');
+  thankMessage.innerText = `${firstName}, გმადლობთ ბოიკოტში მონაწილეობისათვის! 🇬🇪🇪🇺`;
+});
